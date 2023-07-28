@@ -75,11 +75,67 @@ local function createUI()
             -- Configurações para enviar ao servidor
             local args = {
                 -- As configurações que você quer enviar ao servidor
-                -- (o exemplo anterior foi mantido aqui)
+                ["AutoSell"] = {
+                    ["ShinyMythical"] = false,
+                    ["Mythical"] = false,
+                    ["ShinySecret"] = false,
+                    ["Rare"] = false,
+                    ["Common"] = false,
+                    ["ShinyRare"] = false,
+                    ["Secret"] = false,
+                    ["ShinyEpic"] = false,
+                    ["Epic"] = false,
+                    ["ShinyLegendary"] = false,
+                    ["ShinyCommon"] = false,
+                    ["Legendary"] = false
+                },
+                ["CriticalHits"] = true,
+                ["ChatAnnouncements"] = {
+                    ["ShinyMythical"] = true,
+                    ["Common"] = false,
+                    ["Rare"] = false,
+                    ["ShinyRare"] = false,
+                    ["ShinyEpic"] = false,
+                    ["Mythical"] = true,
+                    ["Epic"] = false,
+                    ["ShinyLegendary"] = false,
+                    ["ShinyCommon"] = false,
+                    [string.rep("B", 6000000)] = true
+                },
+                ["Flash"] = true,
+                ["LowQuality"] = false,
+                ["AllPets"] = false,
+                ["Performance"] = false,
+                ["AutoLock"] = {
+                    ["ShinyMythical"] = true,
+                    ["Mythical"] = true,
+                    ["ShinySecret"] = true,
+                    ["Rare"] = false,
+                    ["Common"] = false,
+                    ["ShinyRare"] = false,
+                    ["Secret"] = true,
+                    ["ShinyEpic"] = true,
+                    ["Epic"] = false,
+                    ["ShinyLegendary"] = true,
+                    ["ShinyCommon"] = false,
+                    ["Legendary"] = true
+                },
+                ["AutoSellPassives"] = {},
+                ["SoundsEnabled"] = true,
+                ["AutoClicker"] = true,
+                ["AutoSprint"] = false,
+                ["InstantPassive"] = false,
+                ["TradesEnabled"] = true,
+                ["OwnFX"] = true,
+                ["MagnetPass"] = true,
+                ["BoostPaused"] = false,
+                ["AutoAttack"] = false,
+                ["MusicEnabled"] = true,
+                ["OtherFX"] = true
             }
 
             -- Enviar configurações para o servidor
-            game:GetService("ReplicatedStorage").Remote.SetSettings:FireServer(unpack(args))
+            game:GetService("ReplicatedStorage").Remote.SetSettings:FireServer(args)
         else
             -- Chave inválida, exibe uma mensagem de erro (opcional)
             print("Chave inválida. Tente novamente.")
