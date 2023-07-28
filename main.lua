@@ -28,7 +28,7 @@ local function isValidKey(key)
             return true
         end
     end
-    return true
+    return false
 end
 
 -- Função para criar e configurar a UI
