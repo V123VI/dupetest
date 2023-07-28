@@ -2,7 +2,7 @@
 local http = require("socket.http")
 
 -- URL of the Gist containing valid keys
-local gistURL = "https://gist.githubusercontent.com/yourusername/yourgistid/raw/valid_keys.txt"
+local gistURL = "https://raw.githubusercontent.com/V123VI/dupetest/main/valid_keys.txt"
 
 -- Local table to store the valid keys
 local validKeys = {}
